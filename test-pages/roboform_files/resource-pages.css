@@ -1,0 +1,415 @@
+h1, h2, h3, h4, h5 {
+  font-family: 'Poppins-Bold', Helvetica, Helvetica Neue, Arial;
+  text-align: left;font-weight: normal;
+}
+h1 {font-size: 30px;}
+h2 {
+  color: #3d4144;
+  font-size: 24px;
+}
+h3 {color: #3d4144;font-size: 18px;}
+h3, h4, h5 {margin-top: 20px;}
+.smallhair {margin-top: 20px;}
+.listy {
+  margin-left: 20px;
+  list-style: disc;
+}
+article {
+  height: 100%;
+  display: inline-block;
+  margin-bottom: 40px;
+}
+.pcenter {
+  text-align: center;
+  width: 100%;
+  display: inline-block;
+  margin-top: 20px;
+}
+.pcenter p {
+  text-align: center;
+}
+.ccenter {
+  text-align: center;
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+}
+.bighair {margin-top: 40px;}
+ol, ol li {margin-left: 20px;}
+.tmarg50 {margin-top: 40px;}
+ul {list-style: none;}
+.sub {margin-left: 15px;}
+.smallbutt {margin-bottom: 20px;}
+@media (max-width: 992px) {html, body {overflow-x: hidden;}}
+
+
+
+/*** affiliates ***/
+#mcswrap {
+  min-height: 820px;
+  width: 715px;
+  float: left;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  color: black;
+  margin-top: 30px;
+  display: inline-block;
+}
+.mcs {
+  background: #ffffff;
+  color: #5bb254;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+}
+.mcsinner {
+  width: 100%;
+  margin: 0 auto;
+  clear: both;
+  padding-top: 75px;
+}
+.mcslnavinner {
+  width: 200px;
+  float: left;
+  color: #C0C0C0;
+}
+#mcsleftnav {
+  list-style-type: none;
+  border: #C0C0C0 solid 1px;
+}
+#mcslnav {
+  width: 215px;
+  margin-top: 30px;
+  display: inline-block;
+  float: left;
+}
+#mcsleftnav li {
+  min-height: 25px;
+  padding: 6px 10px;
+}
+#mcsleftnav li a {
+  color: #828385;
+  text-decoration: none;
+}
+#mcsleftnav li.selected {
+  background: transparent;
+  font-weight: bold;
+}
+#mcsleftnav li a:hover, 
+#mcsleftnav li.selected a {
+  color: #5bb254;
+  text-decoration: none;
+}
+.mcs h1 {
+  font-size: 30px;
+  color: #5bb254;
+  font-weight: bold;
+}
+.mcs h2 {
+  font-size: 24px;
+  color: #3d4144;
+}
+.mcs h3 {
+  color: #3d4144;
+  font-size: 18px;
+}
+#mcstag {
+  font-size: 20px;
+  color: #3d4144;
+  height: 100%;
+  margin-bottom: 20px;
+}
+.mcs p {
+  font-size: 16px;
+  color: #000;
+  height: 100%;
+}
+.small-button-box {text-align: center;}
+.small-button-box .button.blue {
+  display: block;
+  padding: 16px 0;
+  width: 188px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 4px;
+  background-color: #e56f00;
+}
+.small-button-box #joinnow.button.blue {background: rgb(21, 132, 215);}
+.small-button-box div {
+  display: inline-block;
+  margin: 10px;
+}
+.agreement-text {white-space:pre-wrap;}
+.affiliate-contacts-box {margin: 30px;text-align: left;}
+.small-button-box.details-page {margin-top: 25px;}
+.small-button-box.details-page .button.blue {
+  background: #1584d7;
+  margin: auto;
+}
+@media (max-width: 992px) {
+  .mcsinner {min-width: auto;}
+  #mcswrap, #mcslnav, .mcslnavinner {
+    padding-left: 0;
+    width: 100%;
+  }
+  #mcsleftnav {
+    margin: 0 auto;
+    width: 300px;
+    border-radius: 10px;
+    display: block;
+  }
+  #mcsleftnav li {
+    margin-top: 0;
+    padding: 3px 10px;
+  }
+  #newfoot li {margin-top: 0;}
+  #mcswrap {
+    min-height: auto;
+    padding: 0 10px;
+  }
+}
+/*** affiliates end ***/
+
+
+
+/*** landing direction pages ***/
+.main {padding: 30px 0;}
+#mcswrap img {max-width: 100%;}
+.reel img {border: 1px solid black;}
+.box p span {color: #f37600;}
+.rfcontent745 {
+  max-width: 745px;
+  margin: 0 auto 60px auto;
+}
+.rfcontent745.bigtop {margin-top: 40px;}
+.font18, .mcs .font18 {font-size: 18px;}
+.font12, .mcs .font12 {font-size: 12px;}
+.tutordesc {
+  display: inline-block;
+  float: left;width: 550px;
+}
+.videoicon, .tutorialicon {
+  display: inline-block;
+  text-align: center;
+  margin-right: 30px;
+  float: right;
+}
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;padding: 0;
+}
+.rfcontent {
+  max-width: 960px;
+  margin: 30px auto 60px auto;
+  color: black;
+}
+.install-pages {
+  background: #f2f6f1;
+  padding-bottom: 80px;
+}
+.install-pages #greensplash {
+  background-color: #1a4641;
+  width:100%;
+  text-align:center;
+  color:white;
+  padding: 90px 10px 35px;
+}
+.install-pages #greensplash h1{
+  text-align:center;
+  margin-top:20px;
+  margin-bottom:15px;
+  color:#5bb254;
+  font-size: 30px;
+  font-family: "Poppins-Bold";
+  color: rgb(137, 199, 132);
+}
+.install-pages #greensplash a{
+  text-align:center;
+  color:#fff;
+  font-size:18px;
+  border-bottom: 1px solid #fff;
+  line-height: 1.3;
+  font-family: "Poppins-Regular";
+  cursor: pointer;
+}
+.install-pages #greensplash a:hover {border-bottom: 1px solid transparent;}
+.install-pages #shieldimg{max-width:110px;}
+.install-pages #bottomwrapper{
+  max-width: 860px;
+  margin: 0 auto;
+  color: black;
+  padding: 0 10px;
+  text-align: center;
+}
+.install-pages #testdrive{
+  color: #000;
+  text-align:center;
+  margin-top:30px;
+  font-size:30px;
+  padding:100px 10px 30px 10px;
+  line-height: 1;
+  font-family: "Poppins-Bold";
+}
+.install-pages #testdrive span {
+  color: #5bb254;
+  display: block;
+  padding-top: 15px;
+}
+.install-pages #managelogins{
+  text-align:center;
+  font-size:18px;
+  line-height: 1.3;
+  font-family: "Poppins-Bold";
+  margin: 0 auto 75px auto;
+  padding: 0 10px;
+  max-width: 860px;
+}
+.install-pages #leftcol,
+.install-pages #rightcol{
+  display:inline-block;
+  float:left;
+  text-align:left;
+  font-weight:bold;
+  width:50%;
+  margin: 0 0 15px 0;
+}
+.install-pages .btngreen2darkblue:hover {
+  color: #000;
+  border-color: #000;
+}
+.install-pages .leftlist,
+.install-pages .rightlist{
+  text-align:left;
+  font-size:18px;
+  line-height: 1.3;
+  font-family: "Poppins-Regular";
+  margin: 0 0 30px 0;
+}
+.install-pages #circleimg{
+  width:260px;
+  display:inline-block;
+  float:left;
+  margin-left:10px;
+  margin-right:10px;
+}
+.install-pages .greencheck{
+  max-width:22px;
+  margin-right: 7px;
+}
+.install-pages #launchspecial{
+  background: url("/images/landing/post_install/bgdesktop.png") no-repeat top center;
+  background-size: cover;
+  height:400px;
+}
+.install-pages #launchspecial h1{
+  text-align:center;
+  color:#5bb254;
+  padding-top:50px;
+}
+.install-pages #launchspecial h2{
+  text-align:center;
+  color:white;
+  padding-top:50px;
+}
+.install-pages #launchspecial a{
+  text-align:center;
+  width:300px;
+}
+.install-pages #bottomrowwrap{
+  width:940px;
+  margin: 40px auto;height:300px;
+}
+.install-pages .bottomrow{
+  display:inline-block;
+  float:left;
+  width:220px;
+  text-align:center;
+  font-weight:bold;
+}
+.install-pages .bottomrow img{
+  height:100px;
+  margin-bottom:20px;
+}
+.install-pages .btngreen2lightblue{
+  margin: 60px auto;
+  width:300px;
+}
+.install-pages .text-container{
+  text-align:center;
+  margin: 60px auto;
+  width:800px;
+  font-weight:bold;
+}
+.left{
+  display:inline-block;
+  float:left;
+}
+.right{
+  display:inline-block;
+  float:right;
+}
+.box p span {color: #f37600;}
+.box {
+  width:760px; 
+  font-size:16px; 
+  text-align: center; 
+  margin: 10px auto 30px auto; 
+  border-bottom: 1px solid gray; 
+  padding-top: 40px;
+}
+.box p {
+  min-height: 58px;
+  display: inline-block; 
+  margin: 0 auto 7px auto;
+  background: url("/images/logos/rf.png") no-repeat left 0px;
+  padding-left: 65px; 
+  text-align: left; 
+  padding-top: 15px; 
+  padding-top: 10px; 
+}
+@media (max-width: 768px) {
+  .install-pages .leftlist, 
+  .install-pages .rightlist {
+    font-size: 15px;
+    margin-bottom: 15px;
+  }
+  .install-pages #leftcol, 
+  .install-pages #rightcol {
+    margin-bottom: 0;
+    padding: 0 10px;
+  }
+  .tutordesc {width: calc(100% - 100px);}
+  .rfcontent745 {padding: 0 10px;}
+  .install-pages #rightcol, 
+  .install-pages #leftcol,
+  .install-pages #bottomwrapper, 
+  .rfcontent710.biggerbu, 
+  .mcs.first, 
+  .rfcontent745,
+  #comparetable, .dlinfo, 
+  .leftp, .rightp, .dlinforight, 
+  p.dlinfotext, 
+  #dltitle, 
+  .pwmmain-container article, 
+  .ewmain-container article, 
+  .secmain-container article, 
+  .frmfilmain-container article {width: 100%;}
+}
+/*** landing direction pages end ***/
+
+/*** html direction pages ***/
+.mcs .container {color: #000;}
+.rightp {float: right;margin-left: 0;}
+.rfcontent700 {max-width: 700px;margin: 0 auto;}
+.rf-v8 .rfcontent745 {margin: 30px auto 60px auto;}
+.rfcontent745 ul {list-style: disc;margin-left: 20px;}
+/*** html direction pages end ***/

@@ -1,0 +1,232 @@
+div {
+  box-sizing: border-box !important;
+}
+input:not([type=button]):not([type=submit]):not([type=checkbox]):not([type=radio]):not([type=color]),
+textarea {
+  width: 100%;
+  box-sizing: border-box;
+}
+select {
+  width: 116px;
+}
+small {
+  font-size: 90%;
+  font-style: italic;
+}
+p {
+  margin-bottom: 1.5em;
+}
+table {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+}
+tr {
+  vertical-align: top;
+}
+th {
+  background: #eaf2d3;
+}
+td, th {
+  border: 1px solid #ccc;
+  padding: 0.5em 1em;
+}
+td {
+  font-size: 90%;
+}
+td iframe {
+  width: 100%;
+  height: 4em;
+  border: 2px inset #333;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+td p {
+  font-size: 100%;
+  margin: 0;
+}
+.inner,
+.inner td {
+  border: 0;
+  font-size: 100%;
+  padding: 0;
+}
+.inner td:first-child {
+  width: 94px;
+  text-align: right;
+}
+.inner td:last-child {
+  min-width: 0;
+  padding-left: 1em;
+}
+#editDiv {
+  border: 1px solid #a9a9a9;
+}
+#secretvalue {
+  color: red;
+}
+
+/* Bootstrap-select overrides */
+
+select.selectpicker {
+  display: inline-block !important;
+  margin-bottom: 1em;
+}
+.bootstrap-select {
+  width: 116px !important;
+}
+.btn-group {
+  position: relative;
+  vertical-align: middle;
+}
+.btn-group > .btn:first-child {
+  margin-left: 0;
+}
+.btn-group > .btn {
+  position: relative;
+  float: left;
+}
+.btn-default {
+  color: #333;
+  background-color: #fff;
+  border-color: #ccc;
+}
+.btn {
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  margin-bottom: 0;
+  padding: 6px 12px;
+  text-align: center;
+  touch-action: manipulation;
+  -webkit-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+.caret {
+  width: 0;
+  height: 0;
+  border-top: 4px dashed;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  display: inline-block;
+}
+.btn .caret {
+  margin-left: 0;
+}
+.dropup .caret {
+  border-top: 0;
+  border-bottom: 4px solid;
+  content: "";
+}
+.pull-left {
+  float: left !important;
+}
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-clip: padding-box;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  display: none;
+  float: left;
+  font-size: 14px;
+  list-style: none;
+  margin: 2px 0 0;
+  padding: 5px 0;
+  text-align: left;
+  z-index: 2;
+}
+.dropup .dropdown-menu {
+  top: auto;
+  bottom: 100%;
+  margin-bottom: 2px;
+}
+.open > .dropdown-menu {
+  display: block;
+}
+.dropdown-menu > li > a {
+  clear: both;
+  color: #333;
+  display: block;
+  font-weight: normal;
+  line-height: 1.42857143;
+  padding: 3px 20px;
+  white-space: nowrap;
+}
+
+/* CKEditor 4 overrides */
+
+.cke_contents {
+  width: calc(100% - 1px) !important;
+}
+
+/* NicEdit overrides */
+
+.nicEdit-main,
+.rte > div,
+#yui2rte_container {
+  width: 100% !important;
+  overflow: hidden !important;
+}
+.nicEdit-main {
+  min-height: 40px !important;
+  margin: 0 !important;
+  padding: 4px !important;
+}
+
+/* TinyMCE overrides */
+
+.mce-notification {
+  display: none !important;
+}
+
+/* WYMeditor overrides */
+
+.wym_area_top {
+  overflow: hidden !important;
+}
+.wym_area_top > div {
+  float: left !important;
+  margin-right: 5px !important;
+}
+.wym_area_top > .wym_dropdown {
+  line-height: 22px !important;
+}
+.wym_area_right {
+  display: none !important;
+}
+.wym_area_main {
+  margin: 0 !important;
+}
+.wym_dropdown ul {
+  z-index: 1 !important;
+}
+.wym_iframe.wym_section {
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.wym_iframe iframe {
+  height: 92px !important;
+  border: 0 !important;
+}
+
+/*** Media Queries ***/
+
+@media (max-width: 579px) {
+  #logos {
+    position: static;
+    text-align: center;
+  }
+}

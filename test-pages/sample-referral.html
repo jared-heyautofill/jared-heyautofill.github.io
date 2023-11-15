@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Employee Referral Form</title>
+<style>
+    body {
+        direction: ltr; /* Default text direction */
+    }
+    body[dir="rtl"] {
+        direction: rtl; /* Right-to-left text direction for languages like Arabic */
+    }
+</style>
+<link rel="stylesheet" href="mvp.css"> 
+</head>
+<body>
+  <main>
+    <form id="referralForm">
+    <h1 data-translate="Employee Referral Form">Employee Referral Form</h1>
+
+    <label for="employeeName" data-translate="Your Name:">Your Name:</label>
+    <input type="text" id="employeeName" name="employeeName" required><br><br>
+
+    <label for="employeeId" data-translate="Employee ID:">Employee ID:</label>
+    <input type="text" id="employeeId" name="employeeId" required><br><br>
+
+    <label for="referralName" data-translate="Referral's Full Name:">Referral's Full Name:</label>
+    <input type="text" id="referralName" name="referralName" required><br><br>
+
+    <label for="referralEmail" data-translate="Referral's Email:">Referral's Email:</label>
+    <input type="email" id="referralEmail" name="referralEmail" required><br><br>
+
+    <label for="referralPhone" data-translate="Referral's Phone Number:">Referral's Phone Number:</label>
+    <input type="tel" id="referralPhone" name="referralPhone"><br><br>
+
+    <label for="positionApplied" data-translate="Position Applied For:">Position Applied For:</label>
+    <input type="text" id="positionApplied" name="positionApplied" required><br><br>
+
+    <label for="relationship" data-translate="Your Relationship with the Referral:">Your Relationship with the Referral:</label>
+    <input type="text" id="relationship" name="relationship" required><br><br>
+
+    <label for="yearsKnown" data-translate="Years Known:">Years Known:</label>
+    <input type="number" id="yearsKnown" name="yearsKnown" min="0" required><br><br>
+    
+    <label for="employmentType" data-translate="Employment Type:">Employment Type:</label>
+    <select id="employmentType" name="employmentType">
+        <option value="full-time" data-translate="Full-time">Full-time</option>
+        <option value="part-time" data-translate="Part-time">Part-time</option>
+        <option value="contract" data-translate="Contract">Contract</option>
+        <option value="intern" data-translate="Intern">Intern</option>
+    </select><br><br>
+
+    <fieldset>
+        <legend data-translate="Referral's Current Employment Status:">Referral's Current Employment Status:</legend>
+        <label for="employed" data-translate="Employed">Employed</label>
+        <input type="radio" id="employed" name="employmentStatus" value="employed" checked>
+        <label for="unemployed" data-translate="Unemployed">Unemployed</label>
+        <input type="radio" id="unemployed" name="employmentStatus" value="unemployed"><br><br>
+    </fieldset>
+
+    <label for="referralQualifications" data-translate="Referral's Qualifications and Experience:">Referral's Qualifications and Experience:</label>
+    <textarea id="referralQualifications" name="referralQualifications" rows="4" cols="50" required></textarea><br><br>
+
+    <label for="additionalInfo" data-translate="Additional Information:">Additional Information:</label>
+    <textarea id="additionalInfo" name="additionalInfo" rows="4" cols="50"></textarea><br><br>
+
+    <input type="submit" value="Submit Referral" data-translate="Submit Referral">
+</form>
+
+<select id="languageSelect">
+    <option value="en">English</option>
+    <option value="zh">Chinese (Simplified)</option>
+    <option value="hi">Hindi</option>
+    <option value="es">Spanish</option>
+    <option value="ar">Arabic</option>
+</select>
+
+<script>
+    // Translation dictionary
+    const translations = {
+        "en": {
+            // No need for translation since the form starts in English
+        },
+        "zh": {
+            "Employee Referral Form": "员工推荐表",
+            "Your Name:": "你的名字：",
+            "Employee ID:": "员工ID：",
+            "Referral's Full Name:": "推荐人全名：",
+            "Referral's Email:": "推荐人电子邮箱：",
+            "Referral's Phone Number:": "推荐人电话号码：",
+            "Position Applied For:": "申请职位：",
+            "Your Relationship with the Referral:": "与推荐人的关系：",
+            "Years Known:": "认识的年数：",
+            "Employment Type:": "就业类型：",
+            "Full-time": "全职",
+            "Part-time": "兼职",
+            "Contract": "合同",
+            "Intern": "实习生",
+            "Referral's Current Employment Status:": "推荐人当前就业状况：",
+            "Employed": "在职",
+            "Unemployed": "失业",
+            "Referral's Qualifications and Experience:": "推荐人资历及经验：",
+            "Additional Information:": "附加信息：",
+            "Submit Referral": "提交推荐"
+        },
+        "hi": {
+            "Employee Referral Form": "कर्मचारी संदर्भ पत्र",
+            "Your Name:": "आपका नाम:",
+            "Employee ID:": "कर्मचारी आईडी:",
+            "Referral's Full Name:": "संदर्भ का पूरा नाम:",
+            "Referral's Email:": "संदर्भ की ईमेल:",
+            "Referral's Phone Number:": "संदर्भ का फोन नंबर:",
+            "Position Applied For:": "जिस पद के लिए आवेदन किया:",
+            "Your Relationship with the Referral:": "संदर्भ के साथ आपका संबंध:",
+            "Years Known:": "जितने साल से जानते हैं:",
+            "Employment Type:": "रोजगार के प्रकार:",
+            "Full-time": "पूरा समय",
+            "Part-time": "अंशकालिक",
+            "Contract": "अनुबंध",
+            "Intern": "इंटर्न",
+            "Referral's Current Employment Status:": "संदर्भ की वर्तमान नौकरी स्थिति:",
+            "Employed": "रोजगार में",
+            "Unemployed": "बेरोजगार",
+            "Referral's Qualifications and Experience:": "संदर्भ की योग्यता और अनुभव:",
+            "Additional Information:": "अतिरिक्त जानकारी:",
+            "Submit Referral": "संदर्भ जमा करें"
+        },
+        "es": {
+            "Employee Referral Form": "Formulario de referencia de empleado",
+            "Your Name:": "Tu nombre:",
+            "Employee ID:": "ID de empleado:",
+            "Referral's Full Name:": "Nombre completo del referido:",
+            "Referral's Email:": "Correo electrónico del referido:",
+            "Referral's Phone Number:": "Número de teléfono del referido:",
+            "Position Applied For:": "Puesto solicitado:",
+            "Your Relationship with the Referral:": "Tu relación con el referido:",
+            "Years Known:": "Años conocidos:",
+            "Employment Type:": "Tipo de empleo:",
+            "Full-time": "Tiempo completo",
+            "Part-time": "Medio tiempo",
+            "Contract": "Contrato",
+            "Intern": "Becario",
+            "Referral's Current Employment Status:": "Estado de empleo actual del referido:",
+            "Employed": "Empleado",
+            "Unemployed": "Desempleado",
+            "Referral's Qualifications and Experience:": "Calificaciones y experiencia del referido:",
+            "Additional Information:": "Información adicional:",
+            "Submit Referral": "Enviar referencia"
+        },
+        "ar": {
+            "Employee Referral Form": "نموذج إحالة الموظف",
+            "Your Name:": "اسمك:",
+            "Employee ID:": "معرف الموظف:",
+            "Referral's Full Name:": "الاسم الكامل للمحال:",
+            "Referral's Email:": "البريد الإلكتروني للمحال:",
+            "Referral's Phone Number:": "رقم هاتف المُحال:",
+            "Position Applied For:": "المنصب المتقدم له:",
+            "Your Relationship with the Referral:": "علاقتك بالمُحال:",
+            "Years Known:": "عدد السنوات المعروفة:",
+            "Employment Type:": "نوع العمل:",
+            "Full-time": "وقت كامل",
+            "Part-time": "دوام جزئي",
+            "Contract": "عقد",
+            "Intern": "متدرب",
+            "Referral's Current Employment Status:": "الوضع الوظيفي الحالي للمُحال:",
+            "Employed": "مُوظف",
+            "Unemployed": "عاطل",
+            "Referral's Qualifications and Experience:": "مؤهلات وخبرة المحال:",
+            "Additional Information:": "معلومات إضافية:",
+            "Submit Referral": "تقديم الإحالة"
+        }
+    };
+
+    // Function that changes text direction based on language
+    function setDirection(lang) {
+        const direction = lang === 'ar' ? 'rtl' : 'ltr';
+        document.body.setAttribute('dir', direction);
+    }
+
+    function translate(lang) {
+        // Set text direction for languages like Arabic
+        setDirection(lang);
+        
+        // Update text content based on translation dictionary
+        document.querySelectorAll('[data-translate]').forEach(el => {
+            const key = el.getAttribute('data-translate');
+            if (translations[lang] && translations[lang][key] !== undefined) {
+                if (el.tagName.toLowerCase() === 'input' && el.type === 'submit') {
+                    el.value = translations[lang][key];
+                } else if (el.tagName.toLowerCase() === 'option') {
+                    el.text = translations[lang][key];
+                } else {
+                    el.textContent = translations[lang][key];
+                }
+            } else { // Default to English for missing translations
+                el.textContent = key;
+                if (el.tagName.toLowerCase() === 'input' && el.type === 'submit') {
+                    el.value = key;
+                } else if (el.tagName.toLowerCase() === 'option') {
+                    el.text = key;
+                }
+            }
+        });
+    }
+
+    document.getElementById('languageSelect').addEventListener('change', function(e) {
+        translate(e.target.value);
+    });
+</script>
+</main>
+</body>
+</html>

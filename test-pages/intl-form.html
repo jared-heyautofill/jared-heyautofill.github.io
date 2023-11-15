@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Internationalized Form</title>
+  <link rel="stylesheet" href="mvp.css"> 
+  <script>
+    const translations = {
+      en: {
+        fullname: "Full Name",
+        streetAddress: "Street Address",
+        aptExtra: "Apt / Extra",
+        city: "City",
+        stateProvince: "State / Province",
+        country: "Country",
+        email: "Email",
+        phoneNumber: "Phone Number"
+      },
+      zh: {
+        fullname: "全名",
+        streetAddress: "街道地址",
+        aptExtra: "公寓/附加信息",
+        city: "城市",
+        stateProvince: "州 / 省",
+        country: "国家",
+        email: "电子邮箱",
+        phoneNumber: "电话号码"
+      },
+      hi: {
+        fullname: "पूरा नाम",
+        streetAddress: "सड़क का पता",
+        aptExtra: "अपार्टमेंट / अतिरिक्त",
+        city: "शहर",
+        stateProvince: "राज्य / प्रांत",
+        country: "देश",
+        email: "ईमेल",
+        phoneNumber: "फ़ोन नंबर"
+      },
+      es: {
+        fullname: "Nombre completo",
+        streetAddress: "Dirección",
+        aptExtra: "Apto / Adicional",
+        city: "Ciudad",
+        stateProvince: "Estado / Provincia",
+        country: "País",
+        email: "Correo electrónico",
+        phoneNumber: "Número de teléfono"
+      },
+      fr: {
+        fullname: "Nom complet",
+        streetAddress: "Adresse de la rue",
+        aptExtra: "Appartement / Supplément",
+        city: "Ville",
+        stateProvince: "État / Province",
+        country: "Pays",
+        email: "E-mail",
+        phoneNumber: "Numéro de téléphone"
+      },
+      ar: {
+        fullname: "الاسم الكامل",
+        streetAddress: "عنوان الشارع",
+        aptExtra: "شقة / إضافي",
+        city: "المدينة",
+        stateProvince: "الولاية / الإقليم",
+        country: "البلد",
+        email: "البريد الإلكتروني",
+        phoneNumber: "رقم الهاتف"
+      },
+      bn: {
+        fullname: "পুরো নাম",
+        streetAddress: "রাস্তার ঠিকানা",
+        aptExtra: "এপার্টমেন্ট / অতিরিক্ত",
+        city: "শহর",
+        stateProvince: "রাজ্য / প্রদেশ",
+        country: "দেশ",
+        email: "ইমেইল",
+        phoneNumber: "ফোন নম্বর"
+      },
+      ru: {
+        fullname: "Полное имя",
+        streetAddress: "Улица и номер дома",
+        aptExtra: "Квартира / Дополнительно",
+        city: "Город",
+        stateProvince: "Штат / Провинция",
+        country: "Страна",
+        email: "Электронная почта",
+        phoneNumber: "Номер телефона"
+      },
+      pt: {
+        fullname: "Nome completo",
+        streetAddress: "Endereço",
+        aptExtra: "Apartamento / Extra",
+        city: "Cidade",
+        stateProvince: "Estado / Província",
+        country: "País",
+        email: "Email",
+        phoneNumber: "Número de telefone"
+      },
+      id: {
+        fullname: "Nama lengkap",
+        streetAddress: "Alamat Jalan",
+        aptExtra: "Apartemen / Tambahan",
+        city: "Kota",
+        stateProvince: "Provinsi / Negara Bagian",
+        country: "Negara",
+        email: "E-mail",
+        phoneNumber: "Nomor telepon"
+      }
+    };
+
+    function changeLanguage(lang) {
+      const elements = document.querySelectorAll('[data-i18n]');
+      elements.forEach(element => {
+        const i18nKey = element.getAttribute('data-i18n');
+        element.textContent = translations[lang][i18nKey];
+      });
+
+      // If the selected language is RTL (Arabic), adjust the direction.
+      if (lang === 'ar') {
+        document.body.setAttribute('dir', 'rtl');
+      } else {
+        document.body.setAttribute('dir', 'ltr');
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      const languageSelector = document.getElementById('language-selector');
+      languageSelector.addEventListener('change', function(event) {
+        changeLanguage(event.target.value);
+      });
+    });
+  </script>
+</head>
+<body>
+  <main>
+    <label for="language-selector">Choose a language:</label>
+  <select id="language-selector">
+    <option value="en">English</option>
+    <option value="zh">中文 (Chinese)</option>
+    <option value="hi">हिन्दी (Hindi)</option>
+    <option value="es">Español (Spanish)</option>
+    <option value="fr">Français (French)</option>
+    <option value="ar">عربى (Arabic)</option>
+    <option value="bn">বাংলা (Bengali)</option>
+    <option value="ru">Русский (Russian)</option>
+    <option value="pt">Português (Portuguese)</option>
+    <option value="id">Bahasa Indonesia (Indonesian)</option>
+  </select>
+
+  <form>
+    <p><label for='fullname' data-i18n="fullname">Full Name</label></p><input id="fullname"/>
+    <p><label for='address1' data-i18n="streetAddress">Street Address</label></p><input id="address1"/>
+    <p><label for='address2' data-i18n="aptExtra">Apt / Extra</label></p><input id="address2"/>
+    <p><label for='city' data-i18n="city">City</label></p><input id="city"/>
+    <p><label for='state' data-i18n="stateProvince">State / Province</label></p><input id="state"/>
+    <p><label for='country' data-i18n="country">Country</label></p><input id="country"/>
+    <p><label for='email' data-i18n="email">Email</label></p><input id="email"/>
+    <p><label for='phone' data-i18n="phoneNumber">Phone number</label></p><input id="phone"/>
+    <p><input type='submit' /></p>
+  </form>
+  </main>
+</body>
+</html>

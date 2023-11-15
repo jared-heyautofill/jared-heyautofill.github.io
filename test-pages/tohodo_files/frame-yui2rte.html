@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)https://www.tohodo.com/autofill/frame-yui2rte.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+<title>RTE Iframe</title>
+<link rel="stylesheet" href="./simpleeditor.css">
+<style>
+body { margin: 0; }
+.yui-skin-sam .yui-editor-container { box-sizing: border-box; }
+.yui-skin-sam .yui-toolbar-container .yui-toolbar-subcont { padding: 0; }
+</style>
+<script src="./yahoo-dom-event.js"><!-- Utility Dependencies --></script>
+<script src="./element-min.js"><!-- Utility Dependencies --></script>
+<script src="./container_core-min.js"><!-- Needed for Menus, Buttons and Overlays used in the Toolbar --></script>
+<script src="./simpleeditor-min.js"><!-- Source file for Rich Text Editor--></script>
+</head>
+<body>
+<div class="yui-skin-sam">
+  <div id="yui2rte-iframe_container" class="yui-editor-container" style="display: block; width: 100%;"><div class="first-child"><div id="yui2rte-iframe_toolbar" tabindex="-1" class="yui-toolbar-container yui-toolbar-grouped"><fieldset><legend>Toolbar</legend><div class="yui-toolbar-subcont"><div class="yui-toolbar-group yui-toolbar-group-textstyle"><ul><li class="yui-toolbar-groupitem"><span unselectable="on" class="yui-button yui-push-button yui-toolbar-bold" id="yui-gen0" tabindex="-1" role="button" title="Bold CTRL + SHIFT + B"><span class="yui-toolbar-icon"></span><span class="first-child"><a href="https://www.tohodo.com/autofill/frame-yui2rte.html#" tabindex="-1">Bold CTRL + SHIFT + B</a></span></span></li><li class="yui-toolbar-groupitem"><span unselectable="on" class="yui-button yui-push-button yui-toolbar-italic" id="yui-gen1" tabindex="-1" role="button" title="Italic CTRL + SHIFT + I"><span class="yui-toolbar-icon"></span><span class="first-child"><a href="https://www.tohodo.com/autofill/frame-yui2rte.html#" tabindex="-1">Italic CTRL + SHIFT + I</a></span></span></li><li class="yui-toolbar-groupitem"><span unselectable="on" class="yui-button yui-push-button yui-toolbar-underline" id="yui-gen2" tabindex="-1" role="button" title="Underline CTRL + SHIFT + U"><span class="yui-toolbar-icon"></span><span class="first-child"><a href="https://www.tohodo.com/autofill/frame-yui2rte.html#" tabindex="-1">Underline CTRL + SHIFT + U</a></span></span></li></ul></div></div></fieldset></div><h2 class="yui-editor-skipheader" tabindex="-1">This text field can contain stylized text and graphics. To cycle through all formatting options, use the keyboard shortcut Shift + Escape to place focus on the toolbar and navigate between options with your arrow keys. To exit this text editor use the Escape key and continue tabbing. <h4>Common formatting keyboard shortcuts:</h4><ul><li>Control Shift B sets text to bold</li> <li>Control Shift I sets text to italic</li> <li>Control Shift U underlines text</li> <li>Control Shift L adds an HTML link</li></ul></h2><div class="yui-editor-editable-container" style="height: 44px;"><iframe id="yui2rte-iframe_editor" border="0" frameborder="0" marginwidth="0" marginheight="0" leftmargin="0" topmargin="0" allowtransparency="true" width="100%" src="javascript:;" class="yui-editor-editable" style="width: 100%; height: 100%;" src="./saved_resource(5).html"></iframe></div><h2 class="yui-editor-skipheader" tabindex="-1">You have left the Rich Text Editor.</h2></div><textarea id="yui2rte-iframe" rows="2" style="visibility: hidden; position: absolute; top: -9999px; left: -9999px;">YUI 2 Rich Text Editor default text (inline iframe inside iframe).</textarea></div>
+</div>
+<script>
+// YUI 2 Rich Text Editor
+// http://yui.github.io/yui2/docs/yui_2.9.0_full/editor/
+(function() {
+  var oConfig = {
+      width: '100%',
+      height: '44px',
+      toolbar: {
+        buttons: [{
+          group: 'textstyle',
+          buttons: [{
+            type: 'push',
+            label: 'Bold CTRL + SHIFT + B',
+            value: 'bold'
+          }, {
+            type: 'push',
+            label: 'Italic CTRL + SHIFT + I',
+            value: 'italic'
+          }, {
+            type: 'push',
+            label: 'Underline CTRL + SHIFT + U',
+            value: 'underline'
+          }]
+        }]
+      }
+    },
+    yuiEditor = new YAHOO.widget.SimpleEditor('yui2rte-iframe', oConfig);
+  yuiEditor.render();
+})();
+</script>
+
+
+</body><div style="all: initial;"><template shadowrootmode="closed"><link rel="stylesheet" href="chrome-extension://iibninhmiggehlcdolcilmhacighjamp/shared-ui-components/variables.css"></template></div></html>

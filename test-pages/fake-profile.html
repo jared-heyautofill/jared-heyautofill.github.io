@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fake Profile Generator</title>
+<link rel="stylesheet" href="mvp.css"> 
+<link rel="stylesheet" href="fake-profile.css">
+</head>
+<body>
+<main id="profileGenerator" class="profile-generator">
+  <header class="profile-header">
+    <h1>Fake Profile Generator</h1>
+    <button id="generateBtn" class="generate-btn">Generate Profile</button>
+  </header>
+
+  <section class="profile" aria-live="polite">
+    <h2 id="profileName">Name <span class='value'></span></h2>
+    <p id="profileEmail">Email <span class='value'></span></p>
+    <p id="profilePhone">Phone <span class='value'></span></p>
+    <p id="profileAddress">Address <span class='value'></span></p>
+    <p id="profileCollege">College <span class='value'></span></p>
+    <p id="profileSSN">SSN <span class='value'></span></p>
+  </section>
+</main>
+<script src="fake-profile.js"></script>
+</body>
+</html>
