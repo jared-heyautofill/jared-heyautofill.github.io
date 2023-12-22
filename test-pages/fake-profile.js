@@ -76,4 +76,21 @@ function generateProfile() {
 // Add event listener to generate button
 const generateBtn = document.getElementById('generateBtn');
 generateBtn.addEventListener('click', generateProfile);
+const generateBtnNonStop = document.getElementById('generateNonStopBtn');
+let rafId = 0;
+generateBtnNonStop.addEventListener('click', function() {
+  if (rafId) {
+    return;
+  }
+  this.textContent = 'Stop Generating';
+  generateBtnNonStop.addEventListener('click', function() {
+    cancelAnimationFrame(rafId);
+    rafId = 0;
+    this.textContent = 'Generate Profiles Non-stop';
+  }, { once: true });
+  rafId = requestAnimationFrame(function rafCallback() {
+    generateProfile();
+    rafId = requestAnimationFrame(rafCallback);
+  });
+});
 generateProfile();
