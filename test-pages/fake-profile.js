@@ -48,19 +48,21 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+function getRandomItem(array) {
+  return array[getRandomInt(0, array.length)];
+}
+
 // Function to generate random profile data
 function generateProfile() {
   // Create random name
-  const name = `${firstNames[getRandomInt(0, firstNames.length)]} ${lastNames[getRandomInt(0, lastNames.length)]}`;
+  const name = `${getRandomItem(firstNames)} ${getRandomItem(lastNames)}`;
   // Create random email
-  const email = `${name.split(' ').join('.').toLowerCase()}@${domains[getRandomInt(0, domains.length)]}`;
+  const email = `${name.split(' ').join('.').toLowerCase()}@${getRandomItem(domains)}`;
   // Create random phone number (just a dummy format)
   const phone = `+1-${getRandomInt(100, 999)}-${getRandomInt(100, 999)}-${getRandomInt(1000, 9999)}`;
-  // Generate a placeholder image for the profile picture
-  const placeholderImage = `https://via.placeholder.com/200?text=${name.split(' ').join('+')}`;
   
   // Generate random address (very basic)
-  const address = `${getRandomInt(100, 9999)} ${lastNames[getRandomInt(0, lastNames.length)]} St, ${cities[getRandomInt(0, cities.length)]}, ${states[getRandomInt(0, states.length)]}, ${getRandomInt(10000, 99999)}`;
+  const address = `${getRandomInt(100, 9999)} ${getRandomItem(lastNames)} St, ${getRandomItem(cities)}, ${getRandomItem(states)}, ${getRandomInt(10000, 99999)}`;
 
   const ssn = `${getRandomInt(100, 999)}-${getRandomInt(10, 99)}-${getRandomInt(1000, 9999)}`;
 
@@ -69,7 +71,7 @@ function generateProfile() {
   document.querySelector('#profileEmail .value').textContent = email;
   document.querySelector('#profilePhone .value').textContent = phone;
   document.querySelector('#profileAddress .value').textContent = address;
-  document.querySelector('#profileCollege .value').textContent = collegeNames[getRandomInt(0, collegeNames.length)];
+  document.querySelector('#profileCollege .value').textContent = getRandomItem(collegeNames);
   document.querySelector('#profileSSN .value').textContent = ssn;
 }
 
