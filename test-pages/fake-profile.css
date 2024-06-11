@@ -5,22 +5,70 @@ body, html {
 }
 
 .profile-generator {
-  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
   text-align: center;
+  padding-block: 1rem;
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "profile frame"
+    "details frame";
+  grid-gap: 20px;
 }
 
 .profile-header {
-  margin-bottom: 20px;
+  grid-area: header;
+}
+
+.profile:nth-child(2) {
+  grid-area: profile;
+}
+
+.profile:nth-child(3) {
+  grid-area: details;
+}
+
+ul {
+  list-style: none;
+  margin-inline: 0;
+  padding-inline: 0;
+}
+
+ul > li {
+  display: inline;
+}
+
+#frame {
+  grid-area: frame;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+iframe {
+  width: 100%;
+  flex-grow: 1;
+}
+
+#profileImage {
+  font-size: 64pt;
+  display: block;
+}
+
+#profileName,
+#profileJob {
+  margin-block: 0;
 }
 
 .profile {
+  display: flex;
+  flex-direction: column;
   border: 1px solid #ddd;
   padding: 20px;
-  width: 300px;
+  width: 200px;
   border-radius: 5px;
   color: gray;
 }

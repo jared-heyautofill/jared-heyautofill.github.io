@@ -16,20 +16,29 @@
   </header>
 
   <section class="profile" aria-live="polite">
-    <h2 id="profileName">Name <span class='value'></span></h2>
-    <!-- The profileJobTitle has the label and the value in the same node -->
-    <p id="profileJobTitle"></p>
-    <!-- The profileEmployer has the label and the value in the same node -->
-    <p id="profileEmployer"></p>
-    <!-- The profileAccountId has the label and the value in the same node -->
-    <p id="profileAccountId"></p>
-    <p id="profileSalary">Salary <span class='value'></span></p>
+    <div id="profileImage"></div>
+    <h2 id="profileName"><span class='value'></span></h2>
+    <!-- The profileJob has the label and the value in the same node -->
+    <p id="profileJob"></p>
+  </section>
+  <section class="profile">
     <p id="profileEmail">Email <span class='value'></span></p>
     <p id="profilePhone">Phone <span class='value'></span></p>
     <p id="profileAddress">Address <span class='value'></span></p>
+    <p id="profileAccountId"></p>
+    <p id="profileSalary">Salary <span class='value'></span></p>
     <p id="profileCollege">College <span class='value'></span></p>
     <p id="profileSSN">SSN <span class='value'></span></p>
   </section>
+  <div id="frame">
+    <ul>
+      <li><input type="radio" name="menu" checked="checked" value="fake-bio.html" id="bio" /><label for="bio">Biography</label></li>
+      <li><input type="radio" name="menu" value="fake-family.html" id="family" /><label for="family">Family</label></li>
+      <li><input type="radio" name="menu" value="fake-hobbies.html" id="hobbies" /><label for="hobbies">Hobbies</label></li>
+      <li><input type="radio" name="menu" value="fake-aversions.html" id="aversions" /><label for="aversions">Aversions</label></li>
+    </ul>
+    <iframe src="fake-bio.html"></iframe>
+  </div>
 </main>
 <script src="fake-profile.js"></script>
 </body>

@@ -1,4 +1,6 @@
 // Data for generating profiles
+const profileImages = ['🧑', '🧑🏻', '🧑🏼', '🧑🏽', '🧑🏾', '🧑🏿'];
+
 const firstNames = ['John', 'Jane', 'Chris', 'Anna', 'Mike', 'Linda', 'Steve', 'Olivia'];
 
 const lastNames = ['Smith', 'Doe', 'Brown', 'Wilson', 'Garcia', 'Martinez', 'Lee', 'Taylor'];
@@ -98,10 +100,11 @@ function generateProfile() {
   const ssn = `${getRandomInt(100, 999)}-${getRandomInt(10, 99)}-${getRandomInt(1000, 9999)}`;
 
   // Set generated data to profile elements
+  document.querySelector('#profileImage').textContent = getRandomItem(profileImages);
+  document.querySelector('#profileImage').style.backgroundColor = `rgb(${getRandomInt(75, 200)}, ${getRandomInt(75, 200)}, ${getRandomInt(75, 200)})`;
   document.querySelector('#profileName .value').textContent = name;
-  document.querySelector('#profileJobTitle').innerHTML = `<strong>Job Title</strong>: ${getRandomItem(jobTitles)}`;
-  document.querySelector('#profileEmployer').innerHTML = `Employer: ${getRandomItem(employers)}`;
-  document.querySelector('#profileAccountId').innerHTML = `<strong>Account ID</strong> ${getAccountId()}`;
+  document.querySelector('#profileJob').textContent = `${getRandomItem(jobTitles)} at ${getRandomItem(employers)}`;
+  document.querySelector('#profileAccountId').innerHTML = `<span style="color: black;"><span style="color: grey">Account ID</span> ${getAccountId()}</span>`;
   document.querySelector('#profileSalary .value').textContent = `USD $${getSalary()} annually`;
   document.querySelector('#profileEmail .value').textContent = email;
   document.querySelector('#profilePhone .value').textContent = phone;
@@ -109,6 +112,10 @@ function generateProfile() {
   document.querySelector('#profileCollege .value').textContent = getRandomItem(collegeNames);
   document.querySelector('#profileSSN .value').textContent = ssn;
 }
+
+document.querySelector('ul').addEventListener('click', event => {
+  document.querySelector('iframe').src = event.target.value;
+}, false);
 
 // Add event listener to generate button
 const generateBtn = document.getElementById('generateBtn');
