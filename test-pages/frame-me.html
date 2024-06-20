@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Frame me:</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      height: 100vh;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      margin: 16px;
+      height: 100%;
+    }
+
+    iframe {
+      flex-grow: 1;
+      width: 100%;
+    }
+
+  </style>
+</head>
+
+<body>
+  <h1>Outer frame</h1>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const url = params.get('url') || 'https://example.com';
+    const iframe = document.createElement('iframe');
+    iframe.src = url;
+    document.body.append(iframe);
+  </script>
+</body>
+
+</html>
