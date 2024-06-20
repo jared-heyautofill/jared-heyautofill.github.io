@@ -29,12 +29,29 @@
 </head>
 
 <body>
-  <h1>Outer frame</h1>
+  <h1>Loading&hellip;</h1>
 
   <script>
     const params = new URLSearchParams(window.location.search);
     const url = params.get('url') || 'https://example.com';
     const iframe = document.createElement('iframe');
+
+    iframe.addEventListener('load', () => {
+      function isSameOrigin(frame) {
+        try {
+          // Try to access a property that exists on contentWindow (like location.href)
+          const test = frame.contentWindow.location.href;
+          return true;  // No error means same origin
+        } catch (e) {
+          // An error means cross origin
+          return false;
+        }
+      }
+
+      const title = `${isSameOrigin(iframe) ? 'Same' : 'Cross'}-origin frame`;
+      document.querySelector('h1').textContent = title;
+    }, {once: true});
+
     iframe.src = url;
     document.body.append(iframe);
   </script>
