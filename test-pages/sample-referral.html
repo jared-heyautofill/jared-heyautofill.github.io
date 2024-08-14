@@ -19,6 +19,8 @@
     <form id="referralForm">
     <h1 data-translate="Employee Referral Form">Employee Referral Form</h1>
 
+    <div id="delayedFieldContainer"></div>
+
     <label for="employeeName" data-translate="Your Name:">Your Name:</label>
     <input type="text" id="employeeName" name="employeeName" required><br><br>
 
@@ -207,6 +209,37 @@
     document.getElementById('languageSelect').addEventListener('change', function(e) {
         translate(e.target.value);
     });
+
+    // We want to add some fields after a delay
+    setTimeout(function() {
+        const addressLabel = document.createElement('label');
+        addressLabel.setAttribute('for', 'employeeDepartment');
+        addressLabel.setAttribute('data-translate', 'Department:');
+        addressLabel.textContent = 'Department:';
+        document.getElementById('delayedFieldContainer').appendChild(addressLabel);
+
+        const addressInput = document.createElement('input');
+        addressInput.setAttribute('type', 'text');
+        addressInput.setAttribute('id', 'employeeDepartment');
+        addressInput.setAttribute('name', 'employeeDepartment');
+        addressInput.setAttribute('required', '');
+        document.getElementById('delayedFieldContainer').appendChild(addressInput);
+    }, 3000);
+
+    setTimeout(function() {
+        const addressLabel = document.createElement('label');
+        addressLabel.setAttribute('for', 'employeeAddress');
+        addressLabel.setAttribute('data-translate', 'Your Address:');
+        addressLabel.textContent = 'Your Address:';
+        document.getElementById('delayedFieldContainer').appendChild(addressLabel);
+
+        const addressInput = document.createElement('input');
+        addressInput.setAttribute('type', 'text');
+        addressInput.setAttribute('id', 'employeeAddress');
+        addressInput.setAttribute('name', 'employeeAddress');
+        addressInput.setAttribute('required', '');
+        document.getElementById('delayedFieldContainer').appendChild(addressInput);
+    }, 5000);
 </script>
 </main>
 </body>
