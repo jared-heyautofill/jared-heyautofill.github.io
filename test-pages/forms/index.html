@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <title>Forms</title>
+    <meta http-equiv="Cache-Control" content="no-store" />
+    <link rel="stylesheet" href="./style.css">
+    <script src="./generate.js"></script>
+  </head>
+  <body>
+    <!--
+      todo:
+        - Add <form> with all of the inputs
+        - Add fields that require a click to show
+        - Add common editors
+        - Add any funky edge cases we encounter on real sites e.g. healthcare
+    -->
+    <div class="app">
+      <div class="page">
+        <script>document.write(generateAll('1', 'On-page'));</script>
+      </div>
+      <div>
+        <iframe src="./frame-1.html" width="570px" height="850px"></iframe>
+      </div>
+      <div>
+        <iframe src="./frame-2.html" width="570px" height="850px"></iframe>
+      </div>
+    </div>
+  </body>
+</html>

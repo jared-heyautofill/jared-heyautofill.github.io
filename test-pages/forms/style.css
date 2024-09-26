@@ -1,0 +1,69 @@
+body {
+  margin: 0;
+}
+
+h1 {
+  margin: 0 0 10px;
+}
+
+h2 {
+  margin: 0 0 10px;
+  font-size: 22px;
+}
+
+.page {
+  margin: 10px 20px;
+}
+
+.app {
+  display: inline-flex;
+}
+
+iframe {
+  border: none;
+}
+
+.container {
+  border-right: 1px solid #ccc;
+}
+
+.columns {
+  display: inline-flex;
+}
+
+.columns > div {
+  padding-right: 20px;
+}
+
+.section {
+  margin-bottom: 20px;
+}
+
+.inputs > div {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+.inputs label {
+  display: block;
+  width: 75px;
+}
+
+.buttons > div, .selects > div, .multi-line > div {
+  margin-bottom: 10px;
+}
+
+div[contenteditable] {
+  border: 1px solid #ccc;
+  min-height: 50px;
+  width: 200px;
+}
+
+input[type="file"] {
+  width: 180px;
+}
+
+input[type="datetime-local"] {
+  width: 192px;
+}
