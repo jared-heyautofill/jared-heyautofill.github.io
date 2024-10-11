@@ -18,10 +18,23 @@
         <script>document.write(generateAll('1', 'On-page'));</script>
       </div>
       <div>
-        <iframe src="./frame-1.html" width="570px" height="850px"></iframe>
+        <iframe src="./frame-1.html" width="325px" height="2000px"></iframe>
       </div>
       <div>
-        <iframe src="./frame-2.html" width="570px" height="850px"></iframe>
+        <iframe src="./frame-2.html" width="325px" height="2000px"></iframe>
+      </div>
+      <div class="page">
+        <div id="shadow-host"></div>
+        <script>
+          const shadowHost = document.getElementById('shadow-host');
+
+          // Attach a shadow root to the host element
+          const shadowRoot = shadowHost.attachShadow({ mode: 'open' });
+          shadowRoot.innerHTML = `
+            <link rel="stylesheet" href="./style.css">
+            ${generateAll('3', 'Shadow dom')}
+          `
+        </script>
       </div>
     </div>
   </body>

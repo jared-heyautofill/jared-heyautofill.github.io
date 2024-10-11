@@ -4,6 +4,9 @@ body {
 
 h1 {
   margin: 0 0 10px;
+  font-size: 26px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 12px;
 }
 
 h2 {

@@ -10,8 +10,6 @@ function generateAll(id, title) {
         <div>
           ${generateTextInputs(id)}
           ${generateButtons(id)}
-        </div>
-        <div>
           ${generateCheckboxes(id)}
           ${generateRadios(id)}
           ${generateSelects(id)}
