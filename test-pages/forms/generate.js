@@ -195,9 +195,10 @@ function generateMultiLineInputs(id) {
         Content Editable Nested Div
         <div contenteditable id="contenteditable-nested-${id}">
           I'm text at the top level
-          <p>
-            I'm text in a paragraph element
-          </p>
+          <ul>
+            <li>Bullet 1</li>
+            <li>Bullet 2</li>
+          </ul>
         </div>
       </div>
     </div>
