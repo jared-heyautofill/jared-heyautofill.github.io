@@ -192,13 +192,26 @@ function generateMultiLineInputs(id) {
         <div contenteditable id="contenteditable-${id}" placeholder="contenteditable"></div>
       </div>
       <div>
-        Content Editable Nested Div
+        Content Editable Nested Bullets
         <div contenteditable id="contenteditable-nested-${id}">
           I'm text at the top level
           <ul>
             <li>Bullet 1</li>
             <li>Bullet 2</li>
           </ul>
+        </div>
+      </div>
+
+        <div>
+        Content Editable Nested Content Editables
+        <div contenteditable id="contenteditable-nested-${id}">
+          I'm the root content editable
+          <div contenteditable>
+            I'm a nested content editable
+          </div>
+          <div contenteditable>
+            I'm also a nested content editable
+          </div>
         </div>
       </div>
     </div>
