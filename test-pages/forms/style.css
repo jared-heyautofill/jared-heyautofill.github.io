@@ -1,21 +1,43 @@
+* {
+  box-sizing: border-box;
+}
+
+input {
+  margin: 0;
+}
+
+html, body {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+  font-size: 14px;
+  color: rgb(17, 24, 39);
+}
+
 body {
   margin: 0;
 }
 
 h1 {
-  margin: 0 0 10px;
-  font-size: 26px;
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 12px;
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 10px 0 12px 20px;
+  position: fixed;
+  width: 302px;
+  background: rgb(249, 250, 251);
+  border-style: solid;
+  border-color: rgb(229, 231, 235);
+  border-width: 0px 1px 1px 0;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  height: 45px;
+  color: rgb(17, 24, 39);
 }
 
 h2 {
-  margin: 0 0 10px;
-  font-size: 22px;
-}
-
-.page {
-  margin: 10px 20px;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 0 20px;
+  color: rgb(55, 65, 81)
 }
 
 .app {
@@ -24,26 +46,63 @@ h2 {
 
 iframe {
   border: none;
+  overflow: hidden;
 }
 
 .container {
-  border-right: 1px solid #ccc;
+  width: 302px;
+  /* border-right: 1px solid #ccc; */
 }
 
 .columns {
+  padding-top: 45px;
   display: inline-flex;
-}
+  border-style: solid;
+  border-color: rgb(229, 231, 235);
+  border-width: 0px 1px 0 0;
+  width: 302px;
 
-.columns > div {
-  padding-right: 20px;
 }
 
 .section {
-  margin-bottom: 20px;
+  padding: 12px 17px;
+}
+
+.button:not(:last-child) {
+  padding-bottom: 12px;
+}
+
+.check-radio {
+  display: flex;
+  align-items: center;
+  padding-bottom: 3px;
+}
+
+.check-radio input {
+  margin-right: 5px;
+}
+
+.check-radio:not(:last-child) {
+  padding-bottom: 8px;
+}
+
+.heading {
+  text-align: center;
+  padding: 8px 0;
+  border-top: 1px solid rgb(229, 231, 235);
+  border-bottom: 1px solid rgb(229, 231, 235);
+}
+
+.heading.top {
+  border-top: none !important;
+}
+
+.row {
+  padding: 12px 17px;
+  border-bottom: 1px solid rgb(243, 244, 246);
 }
 
 .inputs > div {
-  margin: 10px 0;
   display: flex;
   align-items: center;
 }
@@ -53,20 +112,46 @@ iframe {
   width: 75px;
 }
 
-.buttons > div, .selects > div, .multi-line > div {
-  margin-bottom: 10px;
-}
-
-div[contenteditable] {
-  border: 1px solid #ccc;
-  min-height: 50px;
-  width: 200px;
-}
-
 input[type="file"] {
   width: 180px;
 }
 
 input[type="datetime-local"] {
   width: 192px;
+}
+
+.select-section > div {
+  padding-bottom: 4px;
+}
+
+.select-section:not(:last-child) {
+  padding-bottom: 8px;
+}
+
+.select-section select {
+  width: 100px;
+}
+
+.multi-line-item:not(:last-child) {
+  padding-bottom: 17px;
+}
+
+.multi-line-item-header {
+  padding-bottom: 6px;
+}
+
+.contenteditable-root {
+  border: 1px solid #ccc;
+  min-height: 50px;
+  width: 200px;
+  padding: 4px 7px;
+  width: 100%;
+}
+
+input:not([type="color"]):not([type="file"]):not([type="button"]):not([type="image"]) {
+  border: 1px solid rgb(107, 114, 128);
+  box-shadow: rgb(255, 255, 255);
+  border-radius: 6px;
+  color: rgb(17, 24, 39);
+  padding: 6px 8px;
 }
